@@ -39,13 +39,16 @@ class AgenciaTurismoInterfaz(QWidget):
         self.setLayout(layout)
     
     def reservar_excursion(self):
+        # Obtener el nombre y la excursión seleccionada
         nombre = self.input_nombre.text()
         excursion = self.combo_excursion.currentText()
         
+        # Verificar si se ingresaron datos válidos
         if nombre and excursion:
             mensaje = f"Excursión Reservada:\n\nNombre: {nombre}\nExcursión: {excursion}"
             QMessageBox.information(self, "Reserva Exitosa", mensaje)
             
+            # Limpiar el campo de nombre después de la reserva exitosa
             self.input_nombre.clear()
         else:
             QMessageBox.warning(self, "Error", "Por favor, complete el nombre y seleccione una excursión.")

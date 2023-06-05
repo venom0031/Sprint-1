@@ -42,14 +42,17 @@ class MainWindow(QMainWindow):
     
     def reserva(self):
         self.reserva_interface = ReservaInterfaz()
+        # Muestra la interfaz de reserva
         self.reserva_interface.show()
     
     def agencia_turismo(self):
         self.agencia_turismo_interface = AgenciaTurismoInterfaz()
+        # Muestra la interfaz de la agencia de turismo
         self.agencia_turismo_interface.show()
     
     def restaurante(self):
         self.restaurante_interface = RestauranteInterfaz()
+        # Muestra la interfaz del restaurante
         self.restaurante_interface.show()
 
 if __name__ == '__main__':
